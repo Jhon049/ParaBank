@@ -8,8 +8,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         snippets = CucumberOptions.SnippetType.CAMELCASE,
         publish = true,
-        features = {"src/test/resources/features/ContactUs.feature"},
+        features = {"src/test/resources/features/LogIn.feature"},
         glue = "co.com.sofka.stepdefinition.ParaBank"
 )
-public class FormContactUsTestCucumber {
+public class LogInTestCucumber {
 }

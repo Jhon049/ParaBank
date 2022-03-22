@@ -1,5 +1,6 @@
 package co.com.sofka.stepdefinition.setup;
 
+import co.com.sofka.page.LogIn.LogInPage;
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -24,6 +25,26 @@ public class WebUI {
         driver = new ChromeDriver();
         driver.get(PRUEBA_PARABANK);
         driver.manage().window().maximize();
+    }
+    protected void Login(){
+        LogInPage Login = new LogInPage(driver, 3);
+        Login.formLogInPage();
+
+    }
+    protected void LoginNoValido(){
+        LogInPage Login = new LogInPage(driver, 3);
+        Login.formLogInPageNovalido();
+
+    }
+    protected void validateLogin(){
+        LogInPage Login = new LogInPage(driver, 3);
+        Login.Loginsuccess();
+
+    }
+    protected void validateLoginNovalido(){
+        LogInPage Login = new LogInPage(driver, 3);
+        Login.Loginnovalido();
+
     }
 
     protected void setUpLog4j2(){
