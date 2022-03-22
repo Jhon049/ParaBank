@@ -15,8 +15,6 @@ import java.util.List;
 
 public class LogInPage extends CommonActionOnPages {
 
-    private FormContactUs formContactUs;
-
     @CacheLookup
     @FindBy(id = "name")
     private WebElement name;
@@ -55,7 +53,6 @@ public class LogInPage extends CommonActionOnPages {
     public LogInPage(WebDriver driver,  int seconds) {
         super(driver, seconds, false);
         pageFactoryInitElement(driver, this);
-        this.formContactUs = formContactUs;
     }
 
     public LogInPage(WebDriver driver, int seconds, boolean explicitTime) {
@@ -68,8 +65,8 @@ public class LogInPage extends CommonActionOnPages {
         clickOn(Login);
     }
     public void formLogInPageNovalido(){
-        typeOn(Username,"kevin");
-        typeOn(password,"estanoeslacontrasena");
+        typeOn(Username,"Jhon");
+        typeOn(password,"beta");
         clickOn(Login);
     }
     public void Loginsuccess(){
